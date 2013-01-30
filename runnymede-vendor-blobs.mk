@@ -46,18 +46,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/runnymede/proprietary/etc/firmware/fw_bcm4330_p2p_b1.bin:system/etc/firmware/fw_bcm4330_p2p_b1.bin \
     vendor/htc/runnymede/proprietary/etc/calibration:system/etc/calibration
 
-# HW files
-#vendor/htc/runnymede/proprietary/lib/hw/hwcomposer.msm7x30.so:system/lib/hw/hwcomposer.msm7x30.so \
-#vendor/htc/runnymede/proprietary/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
-#vendor/htc/runnymede/proprietary/lib/hw/gps.runnymede.so:system/lib/hw/gps.runnymede.so \
-#vendor/htc/runnymede/proprietary/lib/hw/sensors.runnymede.so:system/lib/hw/sensors.runnymede.so
-PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so \
-    vendor/htc/runnymede/proprietary/lib/hw/copybit.msm7x30.so:system/lib/hw/copybit.msm7x30.so \
-    vendor/htc/runnymede/proprietary/lib/hw/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
-    vendor/htc/runnymede/proprietary/lib/hw/audio.primary.msm7x30.so:system/lib/hw/audio.primary.msm7x30.so \
-    vendor/htc/runnymede/proprietary/lib/hw/lights.msm7x30.so:system/lib/hw/lights.msm7x30.so 
-
 # EGL
 PRODUCT_COPY_FILES += \
     vendor/htc/runnymede/proprietary/lib/egl/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
@@ -71,50 +59,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/runnymede/proprietary/lib/libgsl.so:/system/lib/libgsl.so \
     vendor/htc/runnymede/proprietary/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so
 
-#	From Primou, not existing in Runnymede
-#    vendor/htc/runnymede/proprietary/lib/libcentralZoomTransition.so:system/lib/libcentralZoomTransition.so \
-#    vendor/htc/runnymede/proprietary/lib/libchromatix_s5k4e5yx_hdr.so:system/lib/libchromatix_s5k4e5yx_hdr.so \
-#    vendor/htc/runnymede/proprietary/lib/libchromatix_s5k4e5yx_hfr_4x.so:system/lib/libchromatix_s5k4e5yx_hfr_4x.so \
-#    vendor/htc/runnymede/proprietary/lib/libcubicRotateTransition.so:system/lib/libcubicRotateTransition.so \
-#    vendor/htc/runnymede/proprietary/lib/libzoomTransition.so:system/lib/libzoomTransition.so \
-#    vendor/htc/runnymede/proprietary/lib/libmmcamera_rawchipproc.so:system/lib/libmmcamera_rawchipproc.so \
-#    vendor/htc/runnymede/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
-#    vendor/htc/runnymede/proprietary/lib/libmmparser.so:system/lib/3libmmparser.so \
-#    vendor/htc/runnymede/proprietary/lib/libmmparser_divxdrmlib.so:system/lib/libmmparser_divxdrmlib.so \
-#    vendor/htc/runnymede/proprietary/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
-#    vendor/htc/runnymede/proprietary/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
-#    vendor/htc/runnymede/proprietary/lib/libqmi.so:/system/lib/libqmi.so \
-#    vendor/htc/runnymede/proprietary/lib/libdll.so:/system/lib/libdll.so \
-#    vendor/htc/runnymede/proprietary/lib/libdiag.so:/system/lib/libdiag.so \
-#    vendor/htc/runnymede/proprietary/lib/libidl.so:/system/lib/libidl.so \
-#    vendor/htc/runnymede/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \
-#    vendor/htc/runnymede/proprietary/lib/libdsutils.so:/system/lib/libdsutils.so \
-#    vendor/htc/runnymede/proprietary/lib/libqdp.so:/system/lib/libqdp.so \
-#    vendor/htc/runnymede/proprietary/bin/bma150_usr:/system/bin/bma150_usr \
-#    vendor/htc/runnymede/proprietary/lib/libOlaEngine.so:system/lib/libOlaEngine.so \
-
-# Camera
-PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
-    vendor/htc/runnymede/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
-    vendor/htc/runnymede/proprietary/bin/awb_camera:/system/bin/awb_camera \
-    vendor/htc/runnymede/proprietary/lib/libcameraface.so:system/lib/libcameraface.so \
-    vendor/htc/runnymede/proprietary/lib/libcamerapp.so:system/lib/libcamerapp.so \
-    vendor/htc/runnymede/proprietary/lib/libchromatix_s5k4e5yx_default_video.so:system/lib/libchromatix_s5k4e5yx_default_video.so \
-    vendor/htc/runnymede/proprietary/lib/libchromatix_s5k4e5yx_hfr.so:system/lib/libchromatix_s5k4e5yx_hfr.so \
-    vendor/htc/runnymede/proprietary/lib/libchromatix_s5k4e5yx_preview.so:system/lib/libchromatix_s5k4e5yx_preview.so \
-    vendor/htc/runnymede/proprietary/lib/libmmipl.so:/system/lib/libmmipl.so \
-    vendor/htc/runnymede/proprietary/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
-    vendor/htc/runnymede/proprietary/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
-    vendor/htc/runnymede/proprietary/bin/lsc_camera:/system/bin/lsc_camera \
-    vendor/htc/runnymede/proprietary/lib/liboemcamera.so:/system/lib/liboemcamera.so
-
-# Ril
-PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/libhtc_ril.so:/system/lib/libhtc_ril.so
-
 # Random Crap..Verify necessity
-#    vendor/htc/runnymede/proprietary/bin/zcb:/system/bin/zcb \ 
 PRODUCT_COPY_FILES += \
     vendor/htc/runnymede/proprietary/lib/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \
     vendor/htc/runnymede/proprietary/lib/libmmosal.so:/system/lib/libmmosal.so \
