@@ -16,12 +16,8 @@
 
 # Prebuilt libraries that are needed to build open-source libraries
 
-PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so
-
 # Audio Blobs
 PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/libaudioalsa.so:/system/lib/libaudioalsa.so \
     vendor/htc/runnymede/proprietary/lib/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \
     vendor/htc/runnymede/proprietary/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     vendor/htc/runnymede/proprietary/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
