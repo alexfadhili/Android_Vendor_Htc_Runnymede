@@ -19,7 +19,7 @@
 PRODUCT_COPY_FILES += \
     vendor/htc/runnymede/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \
     vendor/htc/runnymede/proprietary/hw/camera.default.so:obj/lib/hw/camera.default.so \
-    vendor/htc/runnymede/proprietary/hw/gps.spade.so:obj/lib/hw/gps.spade.so
+    vendor/htc/runnymede/proprietary/hw/gps.runnymede.so:obj/lib/hw/gps.runnymede.so
 
 # Audio Blobs
 PRODUCT_COPY_FILES += \
@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # misc blobs
 PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/hw/gps.runnymede.so:/system/lib/hw/gps.spade.so \
+    vendor/htc/runnymede/proprietary/hw/gps.runnymede.so:/system/lib/hw/gps.runnymede.so \
     vendor/htc/runnymede/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \
     vendor/htc/runnymede/proprietary/logcat2:/system/bin/logcat2 \
     vendor/htc/runnymede/proprietary/snd3254:/system/bin/snd3254 \
