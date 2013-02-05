@@ -16,9 +16,13 @@
 
 # Prebuilt libraries that are needed to build open-source libraries
 
+PRODUCT_COPY_FILES += \
+    vendor/htc/runnymede/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \
+    vendor/htc/runnymede/proprietary/hw/camera.default.so:obj/lib/hw/camera.default.so \
+    vendor/htc/runnymede/proprietary/hw/gps.spade.so:obj/lib/hw/gps.spade.so
+
 # Audio Blobs
 PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \
     vendor/htc/runnymede/proprietary/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     vendor/htc/runnymede/proprietary/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
     vendor/htc/runnymede/proprietary/etc/audio_effects.conf:system/etc/audio_effects.conf \
@@ -42,30 +46,39 @@ PRODUCT_COPY_FILES += \
     vendor/htc/runnymede/proprietary/etc/firmware/fw_bcm4330_p2p_b1.bin:system/etc/firmware/fw_bcm4330_p2p_b1.bin \
     vendor/htc/runnymede/proprietary/etc/calibration:system/etc/calibration
 
-# EGL
+# misc blobs
 PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/egl/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
-    vendor/htc/runnymede/proprietary/lib/egl/libGLES_android.so:/system/lib/egl/libGLES_android.so \
-    vendor/htc/runnymede/proprietary/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
-    vendor/htc/runnymede/proprietary/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
-    vendor/htc/runnymede/proprietary/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
-    vendor/htc/runnymede/proprietary/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
-    vendor/htc/runnymede/proprietary/lib/libOpenVG.so:/system/lib/libOpenVG.so \
-    vendor/htc/runnymede/proprietary/lib/libC2D2.so:/system/lib/libC2D2.so \
-    vendor/htc/runnymede/proprietary/lib/libgsl.so:/system/lib/libgsl.so \
-    vendor/htc/runnymede/proprietary/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so
+    vendor/htc/runnymede/proprietary/hw/gps.runnymede.so:/system/lib/hw/gps.spade.so \
+    vendor/htc/runnymede/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \
+    vendor/htc/runnymede/proprietary/logcat2:/system/bin/logcat2 \
+    vendor/htc/runnymede/proprietary/snd3254:/system/bin/snd3254 \
+    vendor/htc/runnymede/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \
+    vendor/htc/runnymede/proprietary/libgemini.so:/system/lib/libgemini.so \
+    vendor/htc/runnymede/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \
+    vendor/htc/runnymede/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so
 
-# Random Crap..Verify necessity
+# camera blobs 
 PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/lib/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \
-    vendor/htc/runnymede/proprietary/lib/libmmosal.so:/system/lib/libmmosal.so \
-    vendor/htc/runnymede/proprietary/lib/libmmparser.so:/system/lib/libmmparser.so \
-    vendor/htc/runnymede/proprietary/lib/libmmparser_lite.so:/system/lib/libmmparser_lite.so \
-    vendor/htc/runnymede/proprietary/bin/logcat2:/system/bin/logcat2 \
-    vendor/htc/runnymede/proprietary/bin/htc_ebdlogd:/system/bin/htc_ebdlogd \
-    vendor/htc/runnymede/proprietary/bin/rmt_storage:/system/bin/rmt_storage \
-    vendor/htc/runnymede/proprietary/lib/libgemini.so:/system/lib/libgemini.so \
-    vendor/htc/runnymede/proprietary/lib/libposteffect.so:/system/lib/libposteffect.so \
-    vendor/htc/runnymede/proprietary/lib/libv8.so:/system/lib/libv8.so \
-    vendor/htc/runnymede/proprietary/lib/libhardware_legacy.so:/system/lib/libhardware_legacy.so
-
+    vendor/htc/runnymede/proprietary/hw/camera.default.so:/system/lib/hw/camera.default.so \
+    vendor/htc/runnymede/proprietary/awb_camera:/system/bin/awb_camera \
+    vendor/htc/runnymede/proprietary/lsc_camera:/system/bin/lsc_camera \
+    vendor/htc/runnymede/proprietary/libcameraface.so:/system/lib/libcameraface.so \
+    vendor/htc/runnymede/proprietary/libcamerapp.so:/system/lib/libcamerapp.so \
+    vendor/htc/runnymede/proprietary/libchromatix_ov8810_default_video.so:/system/lib/libchromatix_ov8810_default_video.so \
+    vendor/htc/runnymede/proprietary/libchromatix_ov8810_preview.so:/system/lib/libchromatix_ov8810_preview.so \
+    vendor/htc/runnymede/proprietary/libchromatix_ov8830_default_video.so:/system/lib/libchromatix_ov8830_default_video.so \
+    vendor/htc/runnymede/proprietary/libchromatix_ov8830_hfr.so:/system/lib/libchromatix_ov8830_hfr.so \
+    vendor/htc/runnymede/proprietary/libchromatix_ov8830_preview.so:/system/lib/libchromatix_ov8830_preview.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k3h1gx_default_video.so:/system/lib/libchromatix_s5k3h1gx_default_video.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k3h1gx_preview.so:/system/lib/libchromatix_s5k3h1gx_preview.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k3h2yx_default_video.so:/system/lib/libchromatix_s5k3h2yx_default_video.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k3h2yx_hfr.so:/system/lib/libchromatix_s5k3h2yx_hfr.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k3h2yx_preview.so:/system/lib/libchromatix_s5k3h2yx_preview.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k4e5yx_default_video.so:/system/lib/libchromatix_s5k4e5yx_default_video.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k4e5yx_hfr.so:/system/lib/libchromatix_s5k4e5yx_hfr.so \
+    vendor/htc/runnymede/proprietary/libchromatix_s5k4e5yx_preview.so:/system/lib/libchromatix_s5k4e5yx_preview.so \
+    vendor/htc/runnymede/proprietary/libmmipl.so:/system/lib/libmmipl.so \
+    vendor/htc/runnymede/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \
+    vendor/htc/runnymede/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \
+    vendor/htc/runnymede/proprietary/libOlaEngine.so:/system/lib/libOlaEngine.so \
+    vendor/htc/runnymede/proprietary/libposteffect.so:/system/lib/libposteffect.so
