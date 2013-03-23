@@ -18,22 +18,48 @@
 
 PRODUCT_COPY_FILES += \
     vendor/htc/runnymede/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \
-    vendor/htc/runnymede/proprietary/hw/camera.default.so:obj/lib/hw/camera.default.so \
-    vendor/htc/runnymede/proprietary/hw/gps.runnymede.so:obj/lib/hw/gps.runnymede.so
+    vendor/htc/runnymede/proprietary/hw/camera.default.so:obj/lib/hw/camera.default.so
+
+# Screen Blobs
+PRODUCT_COPY_FILES += \
+   vendor/htc/runnymede/proprietary/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
+   vendor/htc/runnymede/proprietary/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
+   vendor/htc/runnymede/proprietary/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
+   vendor/htc/runnymede/proprietary/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
+   vendor/htc/runnymede/proprietary/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
+   vendor/htc/runnymede/proprietary/libC2D2.so:system/lib/libC2D2.so \
+   vendor/htc/runnymede/proprietary/libc2d2_z180.so:system/lib/libc2d2_z180.so \
+   vendor/htc/runnymede/proprietary/libsc-a2xx.so:system/lib/libsc-a2xx.so \
+   vendor/htc/runnymede/proprietary/libgsl.so:system/lib/libgsl.so 
 
 # Audio Blobs
 PRODUCT_COPY_FILES += \
+    vendor/htc/runnymede/proprietary/etc/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
+    vendor/htc/runnymede/proprietary/etc/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
     vendor/htc/runnymede/proprietary/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     vendor/htc/runnymede/proprietary/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
     vendor/htc/runnymede/proprietary/etc/audio_effects.conf:system/etc/audio_effects.conf \
     vendor/htc/runnymede/proprietary/etc/CodecDSPID.txt:system/etc/CodecDSPID.txt \
-    vendor/htc/runnymede/proprietary/etc/IOTable.txt:system/etc/IOTable.txt \
+    vendor/htc/runnymede/proprietary/etc/CodecDSPID_WB.txt:system/etc/CodecDSPID_WB.txt \
     vendor/htc/runnymede/proprietary/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
     vendor/htc/runnymede/proprietary/etc/TPA2051_CFG_BEATS_HW.csv:system/etc/TPA2051_CFG_BEATS_HW.csv \
     vendor/htc/runnymede/proprietary/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
     vendor/htc/runnymede/proprietary/etc/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     vendor/htc/runnymede/proprietary/etc/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
     vendor/htc/runnymede/proprietary/etc/firmware/default_org_wb.acdb:system/etc/firmware/default_org_wb.acdb \
+
+# Sensors
+PRODUCT_COPY_FILES += \
+vendor/htc/runnymede/proprietary/hw/sensors.runnymede.so:/system/lib/hw/sensors.runnymede.so \
+    vendor/htc/runnymede/proprietary/libmpl.so:system/lib/libmpl.so \
+    vendor/htc/runnymede/proprietary/libmlplatform.so:system/lib/libmlplatform.so \
+    vendor/htc/runnymede/proprietary/libmllite.so:system/lib/libmllite.so
+
+# GPS
+PRODUCT_COPY_FILES += \
+    vendor/htc/runnymede/proprietary/hw/gps.runnymede.so:system/lib/hw/gps.runnymede.so \
+    vendor/htc/runnymede/proprietary/librpc.so:system/lib/librpc.so \
+    vendor/htc/runnymede/proprietary/libloc_api-rpc.so:system/lib/libloc_api-rpc.so
 
 # Wifi/BT firmware
 PRODUCT_COPY_FILES += \
@@ -48,10 +74,12 @@ PRODUCT_COPY_FILES += \
 
 # misc blobs
 PRODUCT_COPY_FILES += \
-    vendor/htc/runnymede/proprietary/hw/gps.runnymede.so:/system/lib/hw/gps.runnymede.so \
     vendor/htc/runnymede/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \
     vendor/htc/runnymede/proprietary/logcat2:/system/bin/logcat2 \
     vendor/htc/runnymede/proprietary/snd3254:/system/bin/snd3254 \
+    vendor/htc/runnymede/proprietary/hostapd:/system/bin/hostapd \
+    vendor/htc/runnymede/proprietary/hostapd_cli:/system/bin/hostapd_cli \
+    vendor/htc/runnymede/proprietary/libwvm.so:/system/lib/libwvm.so \
     vendor/htc/runnymede/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \
     vendor/htc/runnymede/proprietary/libgemini.so:/system/lib/libgemini.so \
     vendor/htc/runnymede/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \

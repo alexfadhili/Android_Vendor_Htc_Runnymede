@@ -1,6 +1,6 @@
 Vendor files for the HTC Runnymede (aka Sensation XL)
 
-Copyright (C) 2013 Alexandru PAVAL (Lexmazter) <lex_si_atat@yahoo.com>
+Copyright (C) 2013 RunnyCM
 Parts Copyright (C) 2013 The CyanogenMod Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
