@@ -1,0 +1,2 @@
+#!/system/bin/sh
+echo "0x0a0f 0x140b6070" > /sys/devices/virtual/optical_sensors/proximity/ps_kadc
