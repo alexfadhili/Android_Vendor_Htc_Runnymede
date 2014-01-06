@@ -1,13 +1,7 @@
 #!/system/bin/sh
-# Wifi tether nat routing fix
-iptables -p FORWARD ACCEPT
-iptables -A natctrl_nat_POSTROUTING -t nat -o rmnet0 -j MASQUERADE
-iptables -A natctrl_nat_POSTROUTING -t nat -o usb0 -j MASQUERADE
-iptables -A natctrl_nat_POSTROUTING -t nat -o wlan0 -j MASQUERADE
 
-##proximity sensor values
-echo 0x0a0f 0x140b6050 > /sys/devices/virtual/optical_sensors/proximity/ps_kadc
-
+mount -t vfat -o umask=0000,uid=1028,gid=1028 /dev/block/vold/179:34 /mnt/media_rw/sdcard0
+mount -t vfat -o umask=0000,uid=1028,gid=1028 /dev/block/vold/179:34 /storage/sdcard0
 
 target=`getprop ro.board.platform`
 # Target msm7x30: HTC Runnymede, Bliss, Mecha, Flyer, Ace, Saga, etc.
